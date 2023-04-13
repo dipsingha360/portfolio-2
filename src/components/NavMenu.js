@@ -15,7 +15,7 @@ function NavMenu() {
         onClick={handleClick}
         className={
           !showNav
-            ? "mobile-menu-icon absolute right-[1rem] top-[1rem] cursor-pointer outline-none w-[4rem] sm:hidden"
+            ? "mobile-menu-icon text-4xl absolute right-[1rem] top-[1rem] cursor-pointer sm:hidden hover:text-white duration-300 "
             : "hidden"
         }
       >
@@ -25,37 +25,53 @@ function NavMenu() {
       <ul
         className={
           !showNav
-            ? "sm:flex sm:justify-center sm:items-center sm:gap-10 sm:py-5 hidden"
-            : "flex flex-col justify-center items-center gap-10 py-5"
+            ? "sm:flex sm:justify-center sm:items-center sm:gap-10 sm:py-5 hidden   "
+            : "flex flex-col justify-center items-center gap-10 py-10  "
         }
       >
         <div
           onClick={handleClick}
           className={
             showNav
-              ? "close-icon absolute right-[1rem]  top-[1rem] cursor-pointer w-[4rem]  sm:{}"
+              ? "close-icon text-4xl absolute right-[1rem]  top-[1rem] cursor-pointer w-[4rem] hover:text-white duration-300 "
               : "hidden"
           }
         >
           <MdClose />
         </div>
         <li className="">
-          <NavLink to="/" className=" hover:text-white duration-300">
+          <NavLink
+            onClick={handleClick}
+            to="/"
+            className=" hover:text-white duration-300"
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className=" hover:text-white duration-300">
+          <NavLink
+            onClick={handleClick}
+            to="/about"
+            className=" hover:text-white duration-300"
+          >
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/projects" className=" hover:text-white duration-300">
+          <NavLink
+            onClick={handleClick}
+            to="/projects"
+            className=" hover:text-white duration-300"
+          >
             Projects
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className=" hover:text-white duration-300">
+          <NavLink
+            onClick={handleClick}
+            to="/contact"
+            className=" hover:text-white duration-300"
+          >
             Contact
           </NavLink>
         </li>
